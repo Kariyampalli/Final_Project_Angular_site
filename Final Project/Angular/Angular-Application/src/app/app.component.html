@@ -1,0 +1,41 @@
+<div class="app">
+  <div class="banner">
+  <a>{{ title }}</a>
+  <button class="profile-button" [matMenuTriggerFor]="profileMenu" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+    <mat-icon class="profile-button-icon"> account_circle</mat-icon>
+  </button>
+  <mat-menu #profileMenu="matMenu">
+    <button *ngIf="!authentificationService.GetIsAutehnticated()" routerLink="/forms" mat-menu-item>
+      <mat-icon>description</mat-icon>
+      <span>Form</span>
+    </button>
+    <div *ngIf="authentificationService.GetIsAutehnticated()">
+      <button routerLink="/profile" mat-menu-item>
+        <mat-icon>assignment_ind</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button (click)="Logout()" mat-menu-item>
+      <mat-icon>subdirectory_arrow_right</mat-icon>
+      <span>Logout</span>
+    </button>
+  </div>
+  </mat-menu>
+</div>
+  <header>
+    <nav>
+      <div class="admin-functions" *ngIf="authentificationService.GetIsAutehnticated()">
+      <button mat-raised-button color="basic" routerLink="/cts_entries">Entries</button>
+      <button mat-raised-button color="basic" routerLink="/createEntry">Create an entry</button>
+      <button mat-raised-button color="basic" (click)="dialog.About()">About</button>
+    </div>
+    </nav>    
+  </header>
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<!--<div class="header">
+<h1>{{title}}</h1>
+<a class="date">Today is:{{_currentDate}}</a>
+</div>
+<router-outlet></router-outlet>-->

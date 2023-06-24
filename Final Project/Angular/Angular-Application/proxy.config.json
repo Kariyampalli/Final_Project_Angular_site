@@ -1,0 +1,27 @@
+{
+    "/admins/*": {
+      "target": "http://localhost:9999/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    },
+    "/entries/*": {
+      "target": "http://localhost:9999/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+    ,
+    "/interactions/*": {
+      "target": "http://localhost:9999/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    } ,
+    "/users/*": {
+      "target": "http://localhost:9999/",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

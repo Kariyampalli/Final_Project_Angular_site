@@ -1,0 +1,32 @@
+.tab-container{
+    text-align: center;
+    }
+    .error-label{
+      color: red;
+      font-weight: bold;
+    }
+    .mydiv{
+        justify-content: center;
+        display: flex;
+    }
+    .login-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            height: 300px;
+            width: 300px;      
+            margin: 3px;
+            padding: 16px;
+          }
+
+          .registration-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            height: 450px;
+            width: 300px;      
+            margin: 3px;
+            padding: 16px;
+          }

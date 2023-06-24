@@ -1,0 +1,95 @@
+<mat-stepper *ngIf="authentificationService.GetIsAutehnticated()" linear #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Entry</ng-template>
+      <div  class="form-content mat-elevation-z5">
+      <td>
+        <tr>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput [(ngModel)]="entry.name" formControlName="nameField" required />
+          </mat-form-field>
+        </tr>
+        <tr>
+            <mat-form-field appearance="fill">
+              <mat-label>Company</mat-label>
+              <input matInput [(ngModel)]="entry.company" formControlName="companyFiled" required />
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field appearance="fill">
+              <mat-label>Adress</mat-label>
+              <input matInput [(ngModel)]="entry.address" formControlName="addressField" required />
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field appearance="fill">
+              <mat-label>Postal Code</mat-label>
+              <input matInput [(ngModel)]="entry.postalCode" formControlName="postalCodeField" required />
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field appearance="fill">
+              <mat-label>Country</mat-label>
+              <input matInput [(ngModel)]="entry.country" formControlName="countryField" required />
+            </mat-form-field>
+          </tr>
+          <tr>
+            <mat-form-field appearance="fill">
+              <mat-label>City</mat-label>
+              <input matInput [(ngModel)]="entry.city" formControlName="cityField" required />
+            </mat-form-field>
+          </tr>
+          <div class="nextButton">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+      </td>
+    </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <div class="personal-details mat-elevation-z5">
+        <td>
+            <tr>
+                <qr-code id="qrcode" value='http://localhost:9999/entries/entry/{{entry.id}}' [size]="150"></qr-code>
+            </tr>
+<tr>
+    <div class="info mat-elevation-z5">
+    <label><h1>Name:{{entry.name}}</h1></label>
+    </div>
+</tr>
+<tr>
+    <div class="info mat-elevation-z5">
+    <label><h1>Company:{{entry.company}}</h1></label>
+    </div>
+</tr>
+<tr>
+    <div class="info mat-elevation-z5">
+    <label><h1>Address:{{entry.address}}</h1></label>
+</div>
+</tr>
+<tr>
+    <div class="info mat-elevation-z5">
+    <label><h1>Postal code:{{entry.postalCode}}</h1></label>
+</div>
+<tr>
+<tr>
+    <div class="info mat-elevation-z5">
+        <label><h1>Country:{{entry.country}}</h1></label>
+</div>
+</tr>
+<tr>
+    <div class="info mat-elevation-z5">
+        <label><h1>City:{{entry.city}}</h1></label>
+</div>
+</tr>
+
+    <div>   
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="Create()">Create</button>
+    </div>
+</td>
+</div>
+  </mat-step>
+</mat-stepper>

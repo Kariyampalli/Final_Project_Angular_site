@@ -1,0 +1,80 @@
+<div *ngIf="!authentificationService.GetIsAutehnticated()" class="tab-container">
+    <mat-tab-group mat-align-tabs="center" dynamicHeight>
+      <mat-tab label="LogIn">
+        <div class="mydiv">
+        <form #loginForms="ngForm" (ngSubmit)="handleLogin()">       
+          <div class="login-form mat-elevation-z5" mat-align-tabs="center">
+            <div class="example-container">
+              <td>
+                  <tr>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input
+                      name="name"
+                      [(ngModel)]="admin.name"
+                      matInput
+                      type="text"
+                      required
+                    />
+                  </mat-form-field>
+                </tr>
+                <tr>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input name="password" matInput type="password" [(ngModel)]="admin.password" required/>
+                  </mat-form-field>
+                </tr>
+                <tr>
+                    <button type="submit" mat-raised-button color="primary">
+                      LogIn
+                    </button>
+                </tr>
+              </td>
+            </div>
+          </div>
+        </form>
+      </div>
+      </mat-tab>
+      <mat-tab label="Registration"> 
+        <div class="mydiv">
+        <form #loginForms="ngForm" (ngSubmit)="handleRegistration()">
+          <div class="registration-form mat-elevation-z4" mat-align-tabs="center">
+            <div class="example-container">
+              <td>
+                <tr>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input
+                      name="name"
+                      [(ngModel)]="admin.name"
+                      matInput
+                      type="text"
+                      required
+                    />
+                  </mat-form-field>
+                </tr>              
+                <tr>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input name="password"
+                    [(ngModel)]="admin.password" matInput type="password" required />
+                  </mat-form-field>
+                </tr>
+                <tr>
+                    <button type="submit" mat-raised-button color="primary">
+                      Registrate
+                    </button>
+                </tr>
+              </td>
+            </div>
+          </div>
+        </form>
+      </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  
+  <!--<mat-form-field appearance="fill">
+          <input matInput type="password" [(ngModel)] = "_password" placeholder="Password" required>
+      </mat-form-field>-->
+  

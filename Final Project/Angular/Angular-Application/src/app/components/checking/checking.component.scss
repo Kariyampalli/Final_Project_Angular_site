@@ -1,0 +1,18 @@
+.mydiv {
+  justify-content: center;
+  display: flex;
+}
+.checking-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 300px;
+  width: 300px;
+  margin: 3px;
+  padding: 16px;
+}
+
+.checking-button {
+  width: 200px;
+}

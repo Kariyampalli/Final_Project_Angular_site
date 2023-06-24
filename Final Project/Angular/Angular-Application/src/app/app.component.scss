@@ -1,0 +1,40 @@
+.banner {
+  font-size: xx-large;
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  padding: 40px;
+  background-color: rgb(65, 36, 233);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.profile-button{   
+  vertical-align: middle;
+  float: right;
+  transform: scale(1.2);
+  background-color: white;
+  margin-top: -20px;
+}
+
+.profile-button-icon{   
+  vertical-align: middle;
+  float: right;
+  transform: scale(2);
+  margin-top: 3px;
+  color:  rgb(65, 36, 233);
+}
+
+nav {
+  padding: 10px;
+  text-align: center;
+  button {
+    margin-right: 10px;
+  }
+  .admin-functions{
+    margin-top: 10px;
+  }
+}
+
+.date {
+  margin-bottom: 20px;
+}

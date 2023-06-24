@@ -1,0 +1,27 @@
+<div class="mydiv" *ngIf="accessible">
+<form #CheckingForms="ngForm" (ngSubmit)="Click()">       
+    <div class="checking-form mat-elevation-z5" mat-align-tabs="center">
+      <div class="example-container">
+        <td>
+            <tr *ngIf="!checkedIn">
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input
+                name="name"
+                [(ngModel)]="name"
+                matInput
+                type="text"
+                required
+              />    
+            </mat-form-field>
+        </tr>      
+          <tr>
+              <button class="checking-button" type="submit" mat-raised-button color="primary">
+                {{buttonText}}
+              </button>
+          </tr>
+        </td>
+      </div>
+    </div>
+  </form>
+</div>

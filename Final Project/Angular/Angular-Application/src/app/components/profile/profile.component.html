@@ -1,0 +1,53 @@
+<mat-card *ngIf="authentificationService.GetIsAutehnticated()" class="card">
+ <div class="data-container">
+   <td>
+  <mat-card-subtitle class="subtitle">Portfolio</mat-card-subtitle>
+  <tr>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput type="text" [(ngModel)]="admin.portfolio.age" value="{{admin.portfolio.age}}">
+    </mat-form-field>
+  </tr>
+  <tr>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput type="text" [(ngModel)]="admin.portfolio.address" value="{{admin.portfolio.address}}">
+    </mat-form-field>
+  </tr>
+  <tr>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Postal code</mat-label>
+      <input matInput type="text" [(ngModel)]="admin.portfolio.postalCode" value="{{admin.portfolio.postalCode}}">
+    </mat-form-field>
+  </tr>
+  <tr>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Country</mat-label>
+      <input matInput type="text" [(ngModel)]="admin.portfolio.country" value="{{admin.portfolio.country}}">
+    </mat-form-field>
+  </tr>
+  <tr>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput type="text" [(ngModel)]="admin.portfolio.city" value="{{admin.portfolio.city}}">
+    </mat-form-field>
+  </tr>
+  <mat-card-subtitle class="subtitle">Admin data</mat-card-subtitle>
+<tr>
+  <mat-form-field class="form-field" appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [(ngModel)]="admin.name" value="{{admin.name}}">
+  </mat-form-field>
+</tr>
+<tr>
+  <mat-form-field class="form-field" appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="admin.password">
+  </mat-form-field>
+</tr>
+</td>
+</div>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" mat-button (click)="Update()">Done</button>
+  </mat-card-actions>
+</mat-card>
